@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
   
     #NEW
     #get request to '/'
-    get 'characters/new'
+    get '/characters/new' do
       erb :'characters/new'
     end
   
@@ -38,5 +38,5 @@ class CharactersController < ApplicationController
   #DELETE
   
     #delete request to /characters/:id
-  
+    
 end
