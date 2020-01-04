@@ -1,0 +1,13 @@
+<form method="post" action="/characters/<%= @characters.id %>">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+<p><%= @characters.player_name %></p>
+<p><%= @characters.campaign %></p>
+<p><%= @characters.character_name %></p>
+<p><%= @characters.character_class %></p>
+<p><%= @characters.armor_class %></p>
+<p><%= @characters.perception %></p>
+<p><%= @characters.investigation %></p>
+<p><%= @characters.insight %></p>
+<p><%= @characters.spell_save_dc %></p>
