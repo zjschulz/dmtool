@@ -1,11 +1,12 @@
 <% @characters.each do |x| %>
-<p><%= x.player_name %></p>
-<p><%= x.campaign %></p>
-<p><%= x.character_name %></p>
-<p><%= x.character_class %></p>
-<p><%= x.armor_class %></p>
-<p><%= x.perception %></p>
-<p><%= x.investigation %></p>
-<p><%= x.insight %></p>
-<p><%= x.spell_save_dc %></p>
+<p><b>Player Name: </b><%= x.player_name %></p>
+<p><b>Campaign: </b><%= x.campaign %></p>
+<p><b>Character Name: </b><%= x.character_name %></p>
+<p><b>Character Class: </b><%= x.character_class %></p>
+<p><b>Armor Class: </b><%= x.armor_class %></p>
+<p><b>Passive Perception: </b><%= x.perception %></p>
+<p><b>Passive Investigation: </b><%= x.investigation %></p>
+<p><b>Passive Insight: </b><%= x.insight %></p>
+<p><b>Spell Save DC: </b><%= x.spell_save_dc %></p>
+<p>____________________________________________</p>
 <% end %>
