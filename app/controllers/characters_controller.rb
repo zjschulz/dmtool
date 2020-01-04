@@ -12,6 +12,9 @@ class CharactersController < ApplicationController
   
     #INDEX
     #get request to /characters
+    get '/characters' do
+      erb :'characters/index'
+    end
     
     #SHOW
     #get request to /characters/:id
