@@ -1,22 +1,13 @@
 <form action="/characters/<%= @characters.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
-    <input type="text" name="player_name" value="<%= @characters.player_name %>">
-    <input type="text" name="campaign" value="<%= @characters.campaign %>">
-    <input type="text" name="character_name" value="<%= @characters.character_name %>">
-    <input type="text" name="character_class" value="<%= @characters.character_class %>">
-    <input type="text" name="armor_class" value="<%= @characters.armor_class %>">
-    <input type="text" name="perception" value="<%= @characters.perception %>">
-    <input type="text" name="investigation" value="<%= @characters.investigation %>">
-    <input type="text" name="insight" value="<%= @characters.insight %>">
-    <input type="text" name="spell_save_dc" value="<%= @characters.spell_save_dc %>">
-    <button type="submit"></button>
+    <p><%= @characters.player_name %><input type="text" name="player_name" value="<%= @characters.player_name %>"></p>
+    <p><%= @characters.campaign %><input type="text" name="campaign" value="<%= @characters.campaign %>"></p>
+    <p><%= @characters.character_name %><input type="text" name="character_name" value="<%= @characters.character_name %>"></p>
+    <p><%= @characters.character_class %><input type="text" name="character_class" value="<%= @characters.character_class %>"></p>
+    <p><%= @characters.armor_class %><input type="text" name="armor_class" value="<%= @characters.armor_class %>"></p>
+    <p><%= @characters.perception %><input type="text" name="perception" value="<%= @characters.perception %>"></p>
+    <p><%= @characters.investigation %><input type="text" name="investigation" value="<%= @characters.investigation %>"></p>
+    <p><%= @characters.insight %><input type="text" name="insight" value="<%= @characters.insight %>"></p>
+    <p><%= @characters.spell_save_dc %><input type="text" name="spell_save_dc" value="<%= @characters.spell_save_dc %>"></p>
+    <button type="submit">Submit Changes</button>
 </form>
-<p><%= @characters.player_name %></p>
-<p><%= @characters.campaign %></p>
-<p><%= @characters.character_name %></p>
-<p><%= @characters.character_class %></p>
-<p><%= @characters.armor_class %></p>
-<p><%= @characters.perception %></p>
-<p><%= @characters.investigation %></p>
-<p><%= @characters.insight %></p>
-<p><%= @characters.spell_save_dc %></p>
