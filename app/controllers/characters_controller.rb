@@ -24,7 +24,7 @@ class CharactersController < ApplicationController
     
   #SHOW
   get '/characters/:id' do
-    @characters = Character.find(params[:id])
+    @character = Character.find(params[:id])
     erb :'characters/show'
   end
   
@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
   
   #EDIT
   get '/characters/:id/edit' do
-    @characters = Character.find(params[:id])
+    @character = Character.find(params[:id])
     erb :'characters/edit'
   end
     
@@ -48,8 +48,8 @@ class CharactersController < ApplicationController
     character.investigation = params["investigation"] unless params["investigation"].empty?
     character.insight = params["insight"] unless params["insight"].empty?
     character.spell_save_dc = params["spell_save_dc"] unless params["spell_save_dc"].empty?
-    character.save
     character.update
+    redirect '/characters'
   end
   
   #DELETE
@@ -57,6 +57,7 @@ class CharactersController < ApplicationController
   delete '/characters/:id' do
     character = Character.find(params[:id])
     character.destroy
+    redirect '/characters'
   end
     
 end

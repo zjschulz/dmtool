@@ -1,13 +1,13 @@
-<form action="/characters/<%= @characters.id %>" method="post">
+<form action="/characters/<%= @character.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
-    <p><%= @characters.player_name %><input type="text" name="player_name" value="<%= @characters.player_name %>"></p>
-    <p><%= @characters.campaign %><input type="text" name="campaign" value="<%= @characters.campaign %>"></p>
-    <p><%= @characters.character_name %><input type="text" name="character_name" value="<%= @characters.character_name %>"></p>
-    <p><%= @characters.character_class %><input type="text" name="character_class" value="<%= @characters.character_class %>"></p>
-    <p><%= @characters.armor_class %><input type="text" name="armor_class" value="<%= @characters.armor_class %>"></p>
-    <p><%= @characters.perception %><input type="text" name="perception" value="<%= @characters.perception %>"></p>
-    <p><%= @characters.investigation %><input type="text" name="investigation" value="<%= @characters.investigation %>"></p>
-    <p><%= @characters.insight %><input type="text" name="insight" value="<%= @characters.insight %>"></p>
-    <p><%= @characters.spell_save_dc %><input type="text" name="spell_save_dc" value="<%= @characters.spell_save_dc %>"></p>
+    <p><%= @character.player_name %><input type="text" name="player_name" value="<%= @character.player_name %>"></p>
+    <p><%= @character.campaign %><input type="text" name="campaign" value="<%= @character.campaign %>"></p>
+    <p><%= @character.character_name %><input type="text" name="character_name" value="<%= @character.character_name %>"></p>
+    <p><%= @character.character_class %><input type="text" name="character_class" value="<%= @character.character_class %>"></p>
+    <p><%= @character.armor_class %><input type="text" name="armor_class" value="<%= @character.armor_class %>"></p>
+    <p><%= @character.perception %><input type="text" name="perception" value="<%= @character.perception %>"></p>
+    <p><%= @character.investigation %><input type="text" name="investigation" value="<%= @character.investigation %>"></p>
+    <p><%= @character.insight %><input type="text" name="insight" value="<%= @character.insight %>"></p>
+    <p><%= @character.spell_save_dc %><input type="text" name="spell_save_dc" value="<%= @character.spell_save_dc %>"></p>
     <button type="submit">Submit Changes</button>
 </form>
