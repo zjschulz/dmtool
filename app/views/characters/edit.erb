@@ -1,13 +1,13 @@
 <form action="/characters/<%= @character.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
-    <p><%= @character.player_name %><input type="text" name="player_name" value="<%= @character.player_name %>"></p>
-    <p><%= @character.campaign %><input type="text" name="campaign" value="<%= @character.campaign %>"></p>
-    <p><%= @character.character_name %><input type="text" name="character_name" value="<%= @character.character_name %>"></p>
-    <p><%= @character.character_class %><input type="text" name="character_class" value="<%= @character.character_class %>"></p>
-    <p><%= @character.armor_class %><input type="text" name="armor_class" value="<%= @character.armor_class %>"></p>
-    <p><%= @character.perception %><input type="text" name="perception" value="<%= @character.perception %>"></p>
-    <p><%= @character.investigation %><input type="text" name="investigation" value="<%= @character.investigation %>"></p>
-    <p><%= @character.insight %><input type="text" name="insight" value="<%= @character.insight %>"></p>
-    <p><%= @character.spell_save_dc %><input type="text" name="spell_save_dc" value="<%= @character.spell_save_dc %>"></p>
+    <p>Player Name<input type="text" name="player_name" value="<%= @character.player_name %>"></p>
+    <p>Campaign<input type="text" name="campaign" value="<%= @character.campaign %>"></p>
+    <p>Character Name<input type="text" name="character_name" value="<%= @character.character_name %>"></p>
+    <p>Character Class<input type="text" name="character_class" value="<%= @character.character_class %>"></p>
+    <p>Armor Class<input type="text" name="armor_class" value="<%= @character.armor_class %>"></p>
+    <p>Passive Perception<input type="text" name="perception" value="<%= @character.perception %>"></p>
+    <p>Passive Investigation<input type="text" name="investigation" value="<%= @character.investigation %>"></p>
+    <p>Passive Insight<input type="text" name="insight" value="<%= @character.insight %>"></p>
+    <p>Spell Save DC<input type="text" name="spell_save_dc" value="<%= @character.spell_save_dc %>"></p>
     <button type="submit">Submit Changes</button>
 </form>

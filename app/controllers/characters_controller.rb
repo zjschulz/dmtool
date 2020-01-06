@@ -37,8 +37,8 @@ class CharactersController < ApplicationController
   end
     
   #UPDATE
-  patch '/articles/:id' do 
-    character = Article.find(params[:id])
+  patch '/characters/:id' do 
+    character = Character.find(params[:id])
     character.player_name = params["player_name"] unless params["player_name"].empty?
     character.campaign = params["campaign"] unless params["campaign"].empty?
     character.character_name = params["character_name"] unless params["character_name"].empty?
@@ -48,7 +48,7 @@ class CharactersController < ApplicationController
     character.investigation = params["investigation"] unless params["investigation"].empty?
     character.insight = params["insight"] unless params["insight"].empty?
     character.spell_save_dc = params["spell_save_dc"] unless params["spell_save_dc"].empty?
-    character.update
+    character.save
     redirect '/characters'
   end
   
