@@ -4,7 +4,11 @@ class CharactersController < ApplicationController
   
   #NEW
   get '/characters/new' do
-    erb :'characters/new'
+    if User.find_by(id: session[:user_id])
+      erb :'characters/new'
+    else 
+      redirect :'/login'
+    end 
   end
   
   #CREATE
@@ -18,22 +22,34 @@ class CharactersController < ApplicationController
   
   #INDEX
   get '/characters' do
-    @characters = Character.all
-    erb :'characters/index'
+    if User.find_by(id: session[:user_id])
+      @characters = Character.all
+      erb :'characters/index'
+    else 
+      redirect :'/login'
+    end
   end
     
   #SHOW
   get '/characters/:id' do
-    @character = Character.find(params[:id])
-    erb :'characters/show'
+    if User.find_by(id: session[:user_id])
+      @character = Character.find(params[:id])
+      erb :'characters/show'
+    else 
+      redirect :'/login'
+    end  
   end
   
   #UPDATE
   
   #EDIT
   get '/characters/:id/edit' do
-    @character = Character.find(params[:id])
-    erb :'characters/edit'
+    if User.find_by(id: session[:user_id])
+      @character = Character.find(params[:id])
+      erb :'characters/edit'
+    else 
+      redirect :'/login'
+    end  
   end
     
   #UPDATE
