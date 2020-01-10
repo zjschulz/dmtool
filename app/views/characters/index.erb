@@ -1,12 +1,22 @@
-<% @characters.each do |x| %>
+<style>
+  .bordered {
+    width: 240px;
+    height: 340px;
+    padding: 20px;
+    border: 10px groove cyan;
+  }
+</style>
+
+<center><% @characters.each do |x| %>
+<div class="bordered">
+<b><a href="/characters/<%= x.id %>"><%= x.character_name %></a></b>
+<p><a href="/characters/<%= x.id %>/edit"><i>Edit Character</i></a></p>
 <p><b>Player Name: </b><%= x.player_name %></p>
 <p><b>Campaign: </b><%= x.campaign %></p>
-<p><b>Character Name: </b><%= x.character_name %></p>
 <p><b>Character Class: </b><%= x.character_class %></p>
 <p><b>Armor Class: </b><%= x.armor_class %></p>
 <p><b>Passive Perception: </b><%= x.perception %></p>
 <p><b>Passive Investigation: </b><%= x.investigation %></p>
 <p><b>Passive Insight: </b><%= x.insight %></p>
-<p><b>Spell Save DC: </b><%= x.spell_save_dc %></p>
-<p><a href="/characters/<%= x.id %>/edit">Edit Character</a></p>
-<% end %>
+<p><b>Spell Save DC: </b><%= x.spell_save_dc %></p></div>
+<% end %></center>
