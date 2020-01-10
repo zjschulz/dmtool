@@ -3,14 +3,14 @@
     width: 240px;
     height: 340px;
     padding: 20px;
-    border: 10px groove cyan;
+    border: 10px groove grey;
   }
 </style>
 
 <center><% @characters.each do |x| %>
 <div class="bordered">
-<b><a href="/characters/<%= x.id %>"><%= x.character_name %></a></b>
-<p><a href="/characters/<%= x.id %>/edit"><i>Edit Character</i></a></p>
+<b><big><a href="/characters/<%= x.id %>"><%= x.character_name %></a></big></b>
+<p><a href="/characters/<%= x.id %>/edit"><small>Edit Character</small></a></p>
 <p><b>Player Name: </b><%= x.player_name %></p>
 <p><b>Campaign: </b><%= x.campaign %></p>
 <p><b>Character Class: </b><%= x.character_class %></p>

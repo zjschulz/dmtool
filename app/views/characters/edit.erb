@@ -1,6 +1,15 @@
-<form action="/characters/<%= @character.id %>" method="post">
+<style>
+  .bordered {
+    width: 240px;
+    height: 540px;
+    padding: 20px;
+    border: 10px groove grey;
+  }
+</style>
+
+<center><div class="bordered"><b><form action="/characters/<%= @character.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
-    <p>Player Name<input type="text" name="player_name" value="<%= @character.player_name %>"></p>
+    Player Name<input type="text" name="player_name" value="<%= @character.player_name %>">
     <p>Campaign<input type="text" name="campaign" value="<%= @character.campaign %>"></p>
     <p>Character Name<input type="text" name="character_name" value="<%= @character.character_name %>"></p>
     <p>Character Class<input type="text" name="character_class" value="<%= @character.character_class %>"></p>
@@ -10,4 +19,4 @@
     <p>Passive Insight<input type="text" name="insight" value="<%= @character.insight %>"></p>
     <p>Spell Save DC<input type="text" name="spell_save_dc" value="<%= @character.spell_save_dc %>"></p>
     <button type="submit">Submit Changes</button>
-</form>
+</form></b></div></center>

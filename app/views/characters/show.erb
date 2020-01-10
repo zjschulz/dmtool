@@ -1,4 +1,13 @@
-<b>Character Name: </b><%= @character.character_name %>
+<style>
+  .bordered {
+    width: 240px;
+    height: 340px;
+    padding: 20px;
+    border: 10px groove grey;
+  }
+</style>
+
+<center><div class="bordered"><b><b>Character Name: </b><%= @character.character_name %>
 <p><b>Player Name: </b><%= @character.player_name %></p>
 <p><b>Campaign: </b><%= @character.campaign %></p>
 <p><b>Character Class: </b><%= @character.character_class %></p>
@@ -10,4 +19,4 @@
 <form action="/characters/<%= @character.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button type="submit">Delete Character</button>
-</form>
+</form></b></div></center>
