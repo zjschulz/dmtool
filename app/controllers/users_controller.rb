@@ -6,11 +6,11 @@ class UsersController < ApplicationController
   end
   
   post '/signup' do
-  user = User.new(params)
+    user = User.new(params)
     if user.username.empty? || user.password.empty?
       @error = "Username and Password cannot be blank"
       erb :'users/signup'
-    elsif User.find_by[username: user.username]
+    elsif User.find_by(username: user.username)
       @error = "Username already exists. Try another."
     else
       user.save
@@ -18,7 +18,5 @@ class UsersController < ApplicationController
       redirect 'characters'
     end
   end
-  
-  #Users delete account
   
 end
