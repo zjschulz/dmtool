@@ -9,7 +9,7 @@
 
 <center><% @characters.each do |x| %>
 <div class="bordered">
-<b><big><a href="/characters/<%= x.id %>"><%= x.character_name %></a></big></b>
+<big><a href="/characters/<%= x.id %>"><%= x.character_name %></a></big>
 <p><a href="/characters/<%= x.id %>/edit"><small>Edit Character</small></a></p>
 <p><b>Player Name: </b><%= x.player_name %></p>
 <p><b>Campaign: </b><%= x.campaign %></p>
