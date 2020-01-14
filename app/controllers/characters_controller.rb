@@ -6,7 +6,7 @@ class CharactersController < ApplicationController
   get '/characters/new' do
     if User.find_by(id: session[:user_id])
       erb :'characters/new'
-    else 
+    else
       redirect :'/login'
     end 
   end
@@ -25,7 +25,7 @@ class CharactersController < ApplicationController
     if User.find_by(id: session[:user_id])
       @characters = Character.all
       erb :'characters/index'
-    else 
+    else
       redirect :'/login'
     end
   end
@@ -35,7 +35,7 @@ class CharactersController < ApplicationController
     if User.find_by(id: session[:user_id])
       @character = Character.find(params[:id])
       erb :'characters/show'
-    else 
+    else
       redirect :'/login'
     end  
   end
@@ -47,7 +47,7 @@ class CharactersController < ApplicationController
     if User.find_by(id: session[:user_id])
       @character = Character.find(params[:id])
       erb :'characters/edit'
-    else 
+    else
       redirect :'/login'
     end  
   end
