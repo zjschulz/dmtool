@@ -6,14 +6,14 @@ class SessionsController < ApplicationController
   
   post '/login' do
     if params["username"].empty? || params["password"].empty?
-      @error = "Username and Password cannot be blank."
+      @error = "Username and Password cannot be blank. Please try again"
       erb :'users/login'
     else
       if user = User.find_by(username: params["username"], password: params["password"])
         session[:user_id] = user.id
         redirect '/characters'
       else
-        @error = "Account not found"
+        @error = "Username or Password incorrect. Please try again."
         erb :'users/login'
       end
     end
