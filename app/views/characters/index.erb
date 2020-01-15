@@ -10,7 +10,6 @@
 <center><% @characters.each do |x| %>
 <div class="bordered">
 <big><a href="/characters/<%= x.id %>"><%= x.character_name %></a></big>
-<p><a href="/characters/<%= x.id %>/edit"><small>Edit Character</small></a></p>
 <p><b>Player Name: </b><%= x.player_name %></p>
 <p><b>Campaign: </b><%= x.campaign %></p>
 <p><b>Character Class: </b><%= x.character_class %></p>
@@ -18,6 +17,10 @@
 <p><b>Passive Perception: </b><%= x.perception %></p>
 <p><b>Passive Investigation: </b><%= x.investigation %></p>
 <p><b>Passive Insight: </b><%= x.insight %></p>
-<p><b>Spell Save DC: </b><%= x.spell_save_dc %></p></div>
+<p><b>Spell Save DC: </b><%= x.spell_save_dc %></p>
+<p><% if x.user == current_user %>
+  <a href="/characters/<%= x.id %>/edit"><small>Edit Character</small></a>
+     <% end %>
+  </p>
+  </div>
 <% end %></center>
-<p></p>
