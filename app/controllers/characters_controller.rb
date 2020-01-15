@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
   
   #NEW
   get '/characters/new' do
-    if User.find_by(id: session[:user_id])
+    if logged_in?
       erb :'characters/new'
     else
       redirect :'/login'
@@ -13,7 +13,7 @@ class CharactersController < ApplicationController
   
   #CREATE
   post '/characters' do
-    @characters = Character.create(player_name: params[:player_name], campaign: params[:campaign], character_name: params[:character_name], character_class: params[:character_class], armor_class: params[:armor_class], perception: params[:perception], investigation: params[:investigation], insight: params[:insight], spell_save_dc: params[:spell_save_dc])
+    @characters = current_user.characters.create(player_name: params[:player_name], campaign: params[:campaign], character_name: params[:character_name], character_class: params[:character_class], armor_class: params[:armor_class], perception: params[:perception], investigation: params[:investigation], insight: params[:insight], spell_save_dc: params[:spell_save_dc])
     @characters.save
     redirect "/characters/#{@characters.id}"
   end
@@ -22,7 +22,7 @@ class CharactersController < ApplicationController
   
   #INDEX
   get '/characters' do
-    if User.find_by(id: session[:user_id])
+    if logged_in?
       @characters = Character.all
       erb :'characters/index'
     else
@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
     
   #SHOW
   get '/characters/:id' do
-    if User.find_by(id: session[:user_id])
+    if logged_in?
       @character = Character.find(params[:id])
       erb :'characters/show'
     else
@@ -44,7 +44,7 @@ class CharactersController < ApplicationController
   
   #EDIT
   get '/characters/:id/edit' do
-    if User.find_by(id: session[:user_id])
+    if logged_in?
       @character = Character.find(params[:id])
       erb :'characters/edit'
     else

@@ -18,5 +18,7 @@
 <p><b>Spell Save DC: </b><%= @character.spell_save_dc %></p>
 <form action="/characters/<%= @character.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button type="submit">Delete Character</button>
+  <% if @character.user == current_user %>
+    <button type="submit">Delete Character</button>
+  <% end %>
 </form></div></center>
