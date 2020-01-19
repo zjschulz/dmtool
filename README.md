@@ -22,7 +22,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To initiate my application, type shotgun to access the information needed to go to the correct url.
+
+When the local host is connected and the url is typed, you will begin at the welcome page for my application.
+
+You need to either log in or sign up to access the remainder views.
+
+After doing so, you will be taken to the view which displays all characters.
+
+You may either go back to the home page, view all characters, create a character, log out, or edit characters if they were created by you.
+
+If you click on a characters name, you will be brought to their unique view.
+
+At this view you may delete the character if it was created by you.
+
+You may only edit or delete your own created characters.
 
 ## Development
 
