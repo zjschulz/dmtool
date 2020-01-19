@@ -1,8 +1,6 @@
 # Dmtool
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dmtool`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This tool was designed to make managing a dungeon master's characters easier. It allows a user to create a character, which in turns lets any user view those characters. Only a user may edit or delete their own character. This allows a dungeon master to view all of their player's characters and allows players to update their characters as they change stats. 
 
 ## Installation
 
