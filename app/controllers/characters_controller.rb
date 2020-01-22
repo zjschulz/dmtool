@@ -4,11 +4,8 @@ class CharactersController < ApplicationController
   
   #NEW
   get '/characters/new' do
-    if logged_in?
-      erb :'characters/new'
-    else
-      redirect :'/login'
-    end 
+    redirect_if_logged_in
+    erb :'characters/new'
   end
   
   #CREATE
