@@ -46,6 +46,7 @@ class CharactersController < ApplicationController
   get '/characters/:id/edit' do
     if logged_in?
       @character = Character.find(params[:id])
+      @error = "**Cannot edit another User's character!**"
       erb :'characters/edit'
     else
       redirect :'/login'
@@ -75,5 +76,5 @@ class CharactersController < ApplicationController
     character.destroy
     redirect '/characters'
   end
-    
+  
 end

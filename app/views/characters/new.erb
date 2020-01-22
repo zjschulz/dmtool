@@ -1,21 +1,30 @@
-<center><form method="post" action="/characters">
-  <p><label for="player_name">Player Name</label>
-  <input type="text" id="player_name" name="player_name"></p>
-  <p><label for="campaign">Campaign</label>
+<style>
+  .bordered {
+    width: 240px;
+    height: 540px;
+    padding: 20px;
+    border: 10px groove grey;
+  }
+</style>
+
+<center><div class="bordered"><form method="post" action="/characters">
+  <label for="player_name"><b>Player Name</b></label>
+  <input type="text" id="player_name" name="player_name">
+  <p><label for="campaign"><b>Campaign</b></label>
   <input type="text" id="campaign" name="campaign"></p>
-  <p><label for="character_name">Character Name</label>
+  <p><label for="character_name"><b>Character Name</b></label>
   <input type="text" id="character_name" name="character_name"></p>
-  <p><label for="character_class">Character Class</label>
+  <p><label for="character_class"><b>Character Class</b></label>
   <input type="text" id="character_class" name="character_class"></p>
-  <p><label for="armor_class">Armor Class</label>
+  <p><label for="armor_class"><b>Armor Class</b></label>
   <input type="text" id="armor_class" name="armor_class"></p>
-  <p><label for="perception">Passive Perception</label>
+  <p><label for="perception"><b>Passive Perception</b></label>
   <input type="text" id="perception" name="perception"></p>
-  <p><label for="investigation">Passive Investigation</label>
+  <p><label for="investigation"><b>Passive Investigation</b></label>
   <input type="text" id="investigation" name="investigation"></p>
-  <p><label for="insight">Passive Insight</label>
+  <p><label for="insight"><b>Passive Insight</b></label>
   <input type="text" id="insight" name="insight"></p>
-  <p><label for="spell_save_dc">Spell Save DC</label>
+  <p><label for="spell_save_dc"><b>Spell Save DC</b></label>
   <input type="text" id="spell_save_dc" name="spell_save_dc"></p>
   <input type="submit" value="Submit">
-</form></center>
+</form></div></center>

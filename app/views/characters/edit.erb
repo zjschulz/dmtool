@@ -7,6 +7,7 @@
   }
 </style>
 
+<% if @character.user == current_user %>
 <center><div class="bordered"><b><form action="/characters/<%= @character.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
     Player Name<input type="text" name="player_name" value="<%= @character.player_name %>">
@@ -20,3 +21,6 @@
     <p>Spell Save DC<input type="text" name="spell_save_dc" value="<%= @character.spell_save_dc %>"></p>
     <button type="submit">Submit Changes</button>
 </form></b></div></center>
+<% else %>
+<center><b><font color="red"><%= @error %></font></b></center>
+<% end %>
