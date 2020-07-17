@@ -5,7 +5,6 @@ PATH
 
 GEM
   remote: https://rubygems.org/
-  remote: http://rubygems.org/
   specs:
     activemodel (4.2.11.1)
       activesupport (= 4.2.11.1)
@@ -133,4 +132,4 @@ DEPENDENCIES
   tux
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
